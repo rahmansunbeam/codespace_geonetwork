@@ -2,18 +2,15 @@
 FROM ubuntu:20.04
 
 # Update the package index and install necessary tools
-RUN apt-get update && apt-get install -y openjdk-8-jdk wget unzip
-
 # Create the /app folder if it doesn't already exist
-RUN mkdir -p /app
+RUN apt-get update && apt-get install -y openjdk-8-jdk wget \    
+    && mkdir -p /app
 
 # Download and extract Tomcat 8
 RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz \
     && tar xzf apache-tomcat-8.5.57.tar.gz -C /app \
-    && rm apache-tomcat-8.5.57.tar.gz
-
-# Download and extract GeoNetwork
-RUN wget https://github.com/geonetwork/core-geonetwork/archive/refs/tags/4.2.2.tar.gz \
+    && rm apache-tomcat-8.5.57.tar.gz \
+    && wget https://github.com/geonetwork/core-geonetwork/archive/refs/tags/4.2.2.tar.gz \
     && tar xzf 4.2.2.tar.gz -C /app/apache-tomcat-8.5.57/webapps/geonetwork \
     && rm 4.2.2.tar.gz
 
