@@ -5,7 +5,7 @@ FROM ubuntu:20.04
 RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC \
     && apt-get update && apt-get install -y openjdk-8-jdk wget unzip tzdata git \
     && mkdir -p /opt/tomcat \
-    && mkdir -p /app
+    && mkdir -p ~/app
 
 # Download and extract Tomcat 8 and GeoNetwork
 RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz \
@@ -13,7 +13,8 @@ RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomc
     && rm xzvf apache-tomcat*tar.gz \
     && wget https://altushost-swe.dl.sourceforge.net/project/geonetwork/GeoNetwork_opensource/v4.2.2/geonetwork.war \
     && mv geonetwork.war /opt/tomcat/webapps \
-    && rm geonetwork.war
+    && rm geonetwork.war \
+    && ln -s ~/app /opt/tomcat/webapps
 
 # Set the environment variable for JAVA_HOME
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
