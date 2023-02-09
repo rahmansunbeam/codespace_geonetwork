@@ -1,7 +1,7 @@
 {
     "name": "Tomcat Java 8 Devcontainer",
     "build": {
-        "dockerfile": "FROM ubuntu:20.04\n\n# Update the package index\nRUN apt-get update\n\n# Install OpenJDK 8\nRUN apt-get install -y openjdk-8-jdk\n\n# Install Tomcat\nRUN apt-get install -y tomcat8\n\n# Start Tomcat\nCMD service tomcat8 start && tail -f /var/log/tomcat8/catalina.out"
+        "dockerfile": "Dockerfile"
     },
     "remoteUser": "root"
 }
