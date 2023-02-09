@@ -1,7 +1,5 @@
 {
     "name": "Tomcat Java 8 Devcontainer",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "dockerFile": "./Dockerfile",
     "remoteUser": "root"
 }
