@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y openjdk-8-jdk wget unzip tzdata git \
 # Download and extract Tomcat 8 and GeoNetwork
 RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz \
     && tar xzvf apache-tomcat*tar.gz -C /opt/tomcat --strip-components=1 \
-    && rm xzvf apache-tomcat*tar.gz \
+    && rm apache-tomcat*tar.gz \
     && wget https://altushost-swe.dl.sourceforge.net/project/geonetwork/GeoNetwork_opensource/v4.2.2/geonetwork.war \
     && mv geonetwork.war /opt/tomcat/webapps \
     && rm geonetwork.war \
