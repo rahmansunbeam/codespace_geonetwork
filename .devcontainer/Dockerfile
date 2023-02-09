@@ -14,7 +14,6 @@ RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomc
     && rm apache-tomcat*tar.gz \
     && wget https://altushost-swe.dl.sourceforge.net/project/geonetwork/GeoNetwork_opensource/v4.2.2/geonetwork.war \
     && mv geonetwork.war /opt/tomcat/webapps \
-    && rm geonetwork.war \
     && ln -s ~/app /opt/tomcat/webapps
 
 # Set the environment variable for JAVA_HOME
