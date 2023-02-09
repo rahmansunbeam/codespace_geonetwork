@@ -1,3 +1,5 @@
+// This is a Tomcat container for GeoNetwork
+
 {
     "name": "Tomcat with GeoNetwork",
     "dockerFile": "./Dockerfile",
