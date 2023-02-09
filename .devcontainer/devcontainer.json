@@ -1,5 +1,5 @@
 {
-    "name": "Tomcat Java 8 Devcontainer",
+    "name": "Tomcat with GeoNetwork",
     "dockerFile": "./Dockerfile",
     "remoteUser": "root"
 }
