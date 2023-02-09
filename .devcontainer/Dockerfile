@@ -1,9 +1,10 @@
 # Use an official Ubuntu image as the base image
 FROM ubuntu:20.04
 
+ENV DEBIAN_FRONTEND="noninteractive" TZ="Etc/UTC"
+
 # Update the package index and install necessary tools, install necessary apps
-RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC \
-    && apt-get update && apt-get install -y openjdk-8-jdk wget unzip tzdata git \
+RUN apt-get update && apt-get install -y openjdk-8-jdk wget unzip tzdata git \
     && mkdir -p /opt/tomcat \
     && mkdir -p ~/app
 
