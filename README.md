@@ -1,5 +1,5 @@
 # codespace_tomcat
-A repo that creates a Codespace with Tomcat, GeoNetwork and Elasticsearch. This needs at least 4GB RAM to run.
+A repo that creates a Codespace with Tomcat, GeoNetwork and Elasticsearch. This needs > 4GB RAM to run.
 
 ### Steps to install GeoNetwork
 - start and connect to Codespace
@@ -11,5 +11,6 @@ A repo that creates a Codespace with Tomcat, GeoNetwork and Elasticsearch. This 
 - [x] install Elasticsearch v7.4.2 using the [DEB file](https://www.elastic.co/downloads/elasticsearch)
 - [x] [configure](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04) Elasticsearch - [link](https://geonetwork-opensource.org/manuals/trunk/en/install-guide/installing-index.html), check `service elasticsearch status`
 - [x] set ISO 19115 or 19139 Metadata as template, added the templates using `admin`/`admin` profile, added a seperate user profile too
+- [ ] start the services on startup and keep them running
 - [ ] start adding the contents
 - [ ] make the contents and Metadata transferable
