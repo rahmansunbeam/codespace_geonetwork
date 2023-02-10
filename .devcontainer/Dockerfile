@@ -25,4 +25,4 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 EXPOSE 8080 9200
 
 # Start Tomcat when the container is run
-CMD [ "/opt/tomcat/bin/startup.sh", "&&", "tail", "-f", "/dev/null" , "&&", "service", "elasticsearch", "start"]
+# CMD [ "/opt/tomcat/bin/startup.sh", "&&", "tail", "-f", "/dev/null" , "&&", "service", "elasticsearch", "start"]
