@@ -1,7 +1,7 @@
 # codespace_tomcat
 A repo that creates a Codespace with Tomcat, GeoNetwork and Elasticsearch. This needs > 4GB RAM to run.
 
-### Steps to install GeoNetwork
+### Steps to use GeoNetwork
 - start and connect to Codespace
 - from terminal use `/opt/tomcat/bin/catalina.sh run` to run Tomcat and accessible at [http://localhost:8080/geonetwork](http://localhost:8080/geonetwork)
 - run `service elasticsearch start` to sun Elasticsearch and accessible at [http://localhost:9200](http://localhost:9200)
