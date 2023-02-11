@@ -22,7 +22,7 @@ RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomc
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 # Expose port 8080 for Tomcat, 9200 for Elasticsearch
-EXPOSE 9200 8080
+# EXPOSE 9200 8080
 
 # Start Tomcat when the container is run
 # CMD [ "/opt/tomcat/bin/startup.sh", "&&", "tail", "-f", "/dev/null" , "&&", "service", "elasticsearch", "start"]
