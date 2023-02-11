@@ -1,4 +1,4 @@
-# codespace_tomcat
+# codespace_geonetwork
 A repo that creates a Codespace with Tomcat, GeoNetwork and Elasticsearch. This needs > 4GB RAM to run.
 
 ### Steps to use GeoNetwork
