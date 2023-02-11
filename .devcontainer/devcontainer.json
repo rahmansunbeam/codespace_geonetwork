@@ -1,7 +1,13 @@
-// This is a Tomcat container for GeoNetwork
-
 {
-    "name": "Tomcat with GeoNetwork",
+    "name": "Codespace for GeoNetwork",
+
+    "hostRequirements": {
+        "cpus": 4,
+        "memory": "8gb"
+    },
+
     "dockerFile": "./Dockerfile",
-    "remoteUser": "root"
+    "remoteUser": "root",
+    "postStartCommand": ["service", "elasticsearch", "start", "&&", "/opt/tomcat/bin/startup.sh", "&&", "tail", "-f", "/dev/null"]
 }
+
