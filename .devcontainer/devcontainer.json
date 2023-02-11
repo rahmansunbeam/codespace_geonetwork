@@ -9,6 +9,6 @@
     "dockerFile": "./Dockerfile",
     "remoteUser": "root",
     "forwardPorts": [9200, 8080],
-    "postStartCommand": ["service", "elasticsearch", "start", "&&", "/opt/tomcat/bin/startup.sh", "&&", "tail", "-f", "/dev/null"]
+    "postStartCommand": "service elasticsearch start && sleep 2 && /opt/tomcat/bin/startup.sh run"
 }
 
