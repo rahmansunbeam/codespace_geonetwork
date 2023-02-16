@@ -2,13 +2,13 @@
     "name": "Codespace for GeoNetwork",
 
     "hostRequirements": {
-        "cpus": 4,
+        "cpus": 2,
         "memory": "8gb"
     },
 
     "dockerFile": "./Dockerfile",
     "remoteUser": "root",
     "forwardPorts": [9200, 8080],
-    "postStartCommand": "service elasticsearch start && sleep 2 && /opt/tomcat/bin/startup.sh run"
+    "postStartCommand": "bash -i 'service elasticsearch start && sleep 2 && /opt/tomcat/bin/startup.sh run'"
 }
 
