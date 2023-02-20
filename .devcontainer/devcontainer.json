@@ -2,7 +2,6 @@
     "name": "Codespace for GeoNetwork",
 
     "hostRequirements": {
-        "cpus": 2,
         "memory": "8gb"
     },
 
